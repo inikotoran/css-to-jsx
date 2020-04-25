@@ -20,7 +20,7 @@ func transform(css string) (jsx string, err error) {
 		jsxKey := kebabToCamel(cssKey)
 		jsxVal := cssVal[0:len(cssVal)-1]
 
-		jsx = fmt.Sprintf("%v%v: '%v',\n", jsx, jsxKey, jsxVal)
+		jsx = fmt.Sprintf("%v\n%v: '%v',", jsx, jsxKey, jsxVal)
 
 	}
 
